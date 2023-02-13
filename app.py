@@ -165,20 +165,18 @@ def run():
     #Cosine similarity
     elif cat_op == category[2]:
         select_book = st.selectbox('Select (or start writing in dropdown list below) book title: (Recommendation will be based on this selection)', ['--Select or Write--'] + titles)
-        
         dec = st.radio("Want to fetch book cover?", ('Yes', 'No'))
         if dec == 'No':
             if select_book == '--Select or Write--':
                 st.warning('Please select book!!')
             else:
                 no_of_reco = st.slider('Number of books to recommended:', min_value=5, max_value=20, step=1)
-                table = get_recomm_cos_sim(select_book, cosine_sim, n_sim=no_of_reco)
+                table = get_recomm_cos_sim(select_book, cosine_sim, n_sim=no_of_reco+1)
                 table.pop(0)
                 c = 0
                 st.success('List of: ' + str(no_of_reco) + ' recommendations, have a look below')
                 for b in table:
                       c+=1
-                      st.markdown(f"({c})")
                       st.subheader(f"{c}" + ". "+ get_title(cos_sim_data, b))
                       st.markdown('''<h5 style='text-align: left; color: #d73b5c;'>Author(s): ''' + get_authors(cos_sim_data, b),
                             unsafe_allow_html=True)

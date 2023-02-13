@@ -19,9 +19,9 @@ I used book IDs and user IDs in recommending process. For books, they are 1-1000
 
 ## Recommenders
 
-# KNN
+### KNN
 
-A k-nearest neighbor (KNN) based recommender system is a type of collaborative filtering system that uses the ratings given by users to other items to make recommendations. The system works by calculating the similarity between each pair of items, and then using the similarities to predict how a user will rate a given item.
+A recommender system k-Nearest Neighbor (k-NN) based is a one of collaborative filtering systems that uses the ratings (from users) to recommend. k-NN calculate the similarity between each pair of items, and then system (using these values) try to estmiate how this specific user will rate a given item.
 
 ## Files
 - `app.py` the main file of streamlit web-app, have to be runned in by command 'streamlit run'

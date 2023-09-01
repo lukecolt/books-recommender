@@ -62,11 +62,6 @@ Example results of recommendation:
 
 ![p3](Pictures/p3.png)
 
-## Web-app
-
-App is also available on this link:
-https://lukecolt-books-recommender-app-jq49ty.streamlit.app/
-
 ## Recommenders
 
 I used two very popular ways to build a recommendation system:
